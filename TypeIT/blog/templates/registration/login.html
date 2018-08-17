@@ -8,12 +8,12 @@
     <p>Username and password did not match! Please try again.</p>
   {% endif %}
 
-  <form action="{% url 'blog:login' %}" method="post">
+  <form action="{% url 'login' %}" method="post">
     {% csrf_token %}
-      {% form.as_p %}
+      {{ form.as_p }}
       <input type="submit" class='btn btn-primary' name="" value="Login">
-      <input type="hidden" name="next" value="{{ next }}">
+      <input type="hidden" name="next" value="{{next}}">
   </form>
-  
+
 </div>
 {% endblock %}

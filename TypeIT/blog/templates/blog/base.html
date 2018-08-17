@@ -13,16 +13,17 @@
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+
   </head>
   <body class='loader'>
     <!--Navbar-->
-    <nav class='navbar navbar-default techfont custom-navbar'>
+    <nav class='navbar navbar-expand-lg navbar-light bg-dark techfont custom-navbar'>
       <div class="container">
         <ul class="nav navbar-nav">
-          <li> <a class='navar-brand bigbrand' href="{% url 'post_list' %}"></a> </li>
-          <li> <a href="{% url 'about' %}">About</a> </li>
-          <li> <a href="https://www.github.com">Github</a> </li>
-          <li> <a href="https://www.linkedin.com">Linkedin</a> </li>
+          <li> <a class='navar-brand bigbrand' href="{% url 'post_list' %}">TypeIT</a> </li>
+          <li> <a class="nav-link" href="{% url 'about' %}">About</a> </li>
+          <li> <a class="nav-link" href="https://www.github.com">Github</a> </li>
+          <li> <a class="nav-link" href="https://www.linkedin.com">Linkedin</a> </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -40,7 +41,12 @@
               <a>Welcome: {{ user.username }}</a>
             </li>
           {% else %}
-          <li> <a class='nav navbar-right' href="{% url 'login' %}"> <span class='glyphicon glyphicon-user'></span> </a> </li>
+          <li>
+            <a class='' href="{% url 'login' %}">
+          
+              <img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.0.0/svg/person.svg"></img>
+            </a>
+          </li>
 
           {% endif %}
         </ul>
